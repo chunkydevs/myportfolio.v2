@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl's Beginner Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-ui">
+        <p>XP: <span id="xp">0</span> | Level: <span id="level">1</span></p>
+        <p>Achievements: <span id="achievements">None</span></p>
+    </div>
+
+    <!-- Vertical Navigation Bar -->
+    <nav id="sidebar">
+        <h2>🌐 Carl's Portfolio</h2>
+        <ul>
+            <li><a href="#about" onclick="gainXP(10)">About</a></li>
+            <li><a href="#projects" onclick="gainXP(15)">Projects</a></li>
+            <li><a href="#skills" onclick="gainXP(10)">Skills</a></li>
+        </ul>
+        <div id="contact">
+            <h3>📬 Contact</h3>
+            <p>Email: techassistsolutions1@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/chunkydevs" style="text-decoration: none; color: white;">github.com/chunkydevs</a></p>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h1>🚀 Hey, I'm Carl!</h1>
+            <p>Front-end developer learning HTML, CSS, and JavaScript.</p>
+            <button onclick="revealSecret()">Click for a surprise</button>
+            <p id="secret-message" style="display:none;">You unlocked a secret! 🎉</p>
+        </section>
+
+        <section id="projects">
+            <h2>📂 My Projects</h2>
+
+            <div class="project" onclick="unlockAchievement('Checked out Classnotes Hub!')">
+                <a href="" style="text-decoration: none;  color: white;"><h3>📚 Classnotes Hub</h3></a>
+                <p>A simple website to store and organize class notes.</p>
+                <div class="project-preview">
+                    <img src="Screenshot 2025-02-02 133842.png" style="width: 400px; height: 200px;" alt="Classnotes Hub Preview">
+                </div>
+            </div>
+
+            <div class="project" onclick="unlockAchievement('Tried the To-Do List App!')">
+                <a href="https://chunkydevs.github.io/todolistapp/" style="text-decoration: none;  color: white;"><h3>📝 To-Do List App</h3></a>
+                <p>A beginner-friendly JavaScript app for tracking tasks.</p>
+                <div class="project-preview">
+                    <img src="Screenshot 2025-02-02 134230.png" style="width: 400px; height: 200px;" alt="Classnotes Hub Preview">
+                </div>
+            </div>
+
+            <!--<div class="project" onclick="unlockAchievement('Checked out the Weather App!')">
+                <h3>🌦 Weather App</h3>
+                <p>Displays live weather data using an API.</p>
+            </div>-->
+
+            <!--<div class="project" onclick="unlockAchievement('Tried the Calculator!')">
+                <h3>🖩 Calculator</h3>
+                <p>A basic JavaScript calculator with simple functions.</p>
+            </div>-->
+
+            <!--<div class="project" onclick="unlockAchievement('Played the Quiz Game!')">
+                <h3>🎯 Interactive Quiz</h3>
+                <p>A multiple-choice quiz with JavaScript logic.</p>
+            </div>-->
+        </section>
+
+        <section id="skills">
+            <h2>🚀 My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="progress-bar">
+                        <div class="progress html"></div>
+                    </div>
+                </div>
+        
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="progress-bar">
+                        <div class="progress css"></div>
+                    </div>
+                </div>
+        
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress js"></div>
+                    </div>
+                </div>
+        
+                <!--<div class="skill">
+                    <span>React</span>
+                    <div class="progress-bar">
+                        <div class="progress react"></div>
+                    </div>
+                </div>-->
+            </div>
+        </section>                   
+    </main>
+
+    <section id="code-editor">
+        <h2>💻 Live Code Editor</h2>
+        <p>Write HTML & CSS below. See changes live!</p>
+    
+        <div class="editor-container">
+            <div class="editor">
+                <div class="editor-header">index.html</div>
+                <textarea id="html-code" class="code-area" placeholder="Write HTML here..."></textarea>
+            </div>
+    
+            <div class="editor">
+                <div class="editor-header">style.css</div>
+                <textarea id="css-code" class="code-area" placeholder="Write CSS here..."></textarea>
+            </div>
+        </div>
+    
+        <iframe id="preview" title="Live Code Preview"></iframe>
+    </section>      
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+/* General Styles */
+body {
+    font-family: 'Fira Code', monospace;
+    background: #1e1e1e;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+}
+
+/* XP Bar */
+#game-ui {
+    background: #222;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: lightskyblue;
+    text-align: center;
+}
+
+/* Sidebar Navigation */
+#sidebar {
+    background: #111;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+#sidebar h2 {
+    color: lightskyblue;
+    font-size: 22px;
+}
+
+#sidebar ul {
+    list-style: none;
+    color: black;
+    padding: 0;
+    margin: 30px 0;
+}
+
+#sidebar ul li {
+    margin: 20px 0;
+    color: black;
+    background-color: lightskyblue;
+    border-radius: 6px;
+}
+
+#sidebar ul li:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+#sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#sidebar ul li a:hover {
+    background: blue;
+    border-radius: 5px;
+}
+
+/* Contact Info */
+#contact {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid lightskyblue;
+}
+
+#contact h3 {
+    color: lightskyblue;
+}
+
+h3 {
+    color: black;
+}
+
+/* Main Content */
+main {
+    margin-left: 270px;
+    padding: 50px;
+    width: 100%;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+}
+
+h2 {
+    border-bottom: 2px solid lightskyblue;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Buttons */
+button {
+    background: lightskyblue;
+    border: none;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: darkblue;
+    color: white;
+}
+
+/* Projects */
+.project {
+    background: lightskyblue;
+    color: black;
+    padding: 15px;
+    margin: 15px auto;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background: blue;
+    color: black;
+}
+
+/* Live Code Editor */
+#editor-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 45%;
+    height: 150px;
+    background: #222;
+    color: white;
+    border: 1px solid #ff7f50;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+#preview {
+    width: 100%;
+    height: 200px;
+    background: white;
+    border: 1px solid #ff7f50;
+}
+
+/* Code Editor Section */
+#code-editor {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* VS Code-like Editor */
+.editor-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.editor {
+    background: #252526;
+    border-radius: 8px;
+    width: 45%;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.editor-header {
+    background: #007acc;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.code-area {
+    width: 100%;
+    height: 200px;
+    background: #1e1e1e;
+    color: #dcdcdc;
+    border: none;
+    padding: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    resize: vertical;
+    outline: none;
+}
+
+/* Live Preview */
+#preview {
+    width: 100%;
+    height: 250px;
+    background: white;
+    border: 1px solid #007acc;
+    margin-top: 20px;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Skill Section */
+#skills {
+    text-align: center;
+    padding: 50px;
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Skill Container */
+.skills-container {
+    width: 60%;
+    margin: auto;
+}
+
+/* Individual Skill */
+.skill {
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Progress (Initial State: 0 width) */
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, #ff7f50, #ffcc00);
+    transition: width 1.5s ease-in-out;
+}
+
+/* Hover to Trigger Animation */
+.progress-bar:hover .progress {
+    animation: fillBar 1.5s forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fillBar {
+    0% { width: 0%; }
+    100% { width: var(--progress-width); }
+}
+
+/* Setting Progress Width for Each Skill */
+.progress.html { --progress-width: 80%; }
+.progress.css { --progress-width: 70%; }
+.progress.js { --progress-width: 40%; }
+.progress.react { --progress-width: 10%; }
